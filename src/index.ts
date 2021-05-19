@@ -6,7 +6,7 @@ import { registerPlugin } from '@capacitor/core';
 import type { BarcodeScannerPlugin } from './definitions';
 
 const BarcodeScanner = registerPlugin<BarcodeScannerPlugin>(
-  'BarcodeScannerPlugin',
+  'BarcodeScanner',
   {
     web: () => import('./web').then(m => new m.BarcodeScannerWeb()),
   },
