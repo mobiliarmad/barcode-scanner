@@ -10,12 +10,6 @@ import {
 export class BarcodeScannerWeb
   extends WebPlugin
   implements BarcodeScannerPlugin {
-  constructor() {
-    super({
-      name: 'BarcodeScanner',
-      platforms: ['web'],
-    });
-  }
 
   async prepare(): Promise<void> {
     throw new Error('method not available in web');
@@ -47,10 +41,3 @@ export class BarcodeScannerWeb
     throw new Error('method not available in web');
   }
 }
-
-const BarcodeScanner = new BarcodeScannerWeb();
-
-export { BarcodeScanner };
-
-import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(BarcodeScanner);
